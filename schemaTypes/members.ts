@@ -12,6 +12,14 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      description: 'Unikalny identyfikator generowany na podstawie imieni.',
+      options: { source: 'name', maxLength: 96 },
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'academicTitle',
       title: 'Tytuł naukowy',
       type: 'string',
